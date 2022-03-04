@@ -100,7 +100,7 @@ def unquordle():
     guess_number = 0
 
     # Iterate for nine attempts
-    while guess_number < 8:
+    while guess_number < 9:
 
         # Enter guess
         enter_guess(selected_word)
