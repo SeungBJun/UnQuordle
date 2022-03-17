@@ -118,6 +118,8 @@ def unquordle():
             else:
                 # Trim down potential solutions
                 trimmed_down_lists[incomplete_board] = trim_list_of_guesses(list(trimmed_down_lists[incomplete_board]), selected_word, evaluation)
+                if selected_word in trimmed_down_lists[incomplete_board]:
+                    trimmed_down_lists[incomplete_board].remove(selected_word)
 
         # Check if Quordle has been solved
         if len(incomplete_boards) == 0:
